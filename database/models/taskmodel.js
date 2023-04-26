@@ -6,7 +6,7 @@ class Task extends Model {}
 Task.init({
     description:{
         type:DataTypes.STRING,
-        allowNull:true
+        allowNull:false
     },
     priority_level:{
         type:DataTypes.INTEGER,
