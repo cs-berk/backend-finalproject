@@ -24,7 +24,7 @@ Task.init({
     },
     employee_id:{
         type:DataTypes.INTEGER,
-        allowNull:false,
+        allowNull:true,
         references:{
             model:Employee,
             key:"id"

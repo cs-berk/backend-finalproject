@@ -15,7 +15,8 @@ router.get('/:id', ash(async(req, res) => {
     res.status(200).json(task);
   }));
 router.post('/', ash(async(req, res) => {
-    let task = await Task.create(req.body);
+    let newtask = await Task.create(req.body);
+    let task = await Task.findByPk(newtask.id,{include: [Employee]});
     res.status(200).json(task);
   }));
 router.put('/:id', ash(async(req, res) => {
